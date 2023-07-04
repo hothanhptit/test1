@@ -1,0 +1,46 @@
+{
+  "workspaces": {
+    "packages": [
+      "projectservice",
+      "serviceoverviewservice",
+      "learnservice",
+      "productservice",
+      "gateway"
+    ]
+  },
+  "scripts": {
+    "backend:build-cache": "concurrently npm:backend:build-cache:projectservice npm:backend:build-cache:serviceoverviewservice npm:backend:build-cache:learnservice npm:backend:build-cache:productservice npm:backend:build-cache:gateway",
+    "backend:build-cache:gateway": "npm run backend:build-cache --workspace gateway --if-present",
+    "backend:build-cache:learnservice": "npm run backend:build-cache --workspace learnservice --if-present",
+    "backend:build-cache:productservice": "npm run backend:build-cache --workspace productservice --if-present",
+    "backend:build-cache:projectservice": "npm run backend:build-cache --workspace projectservice --if-present",
+    "backend:build-cache:serviceoverviewservice": "npm run backend:build-cache --workspace serviceoverviewservice --if-present",
+    "ci:backend:test": "npm run ci:backend:test --workspaces --if-present",
+    "ci:e2e:package": "npm run ci:docker:build --workspaces --if-present && npm run java:docker --workspaces --if-present",
+    "ci:e2e:run": "npm run e2e:headless --workspaces --if-present",
+    "ci:frontend:test": "npm run ci:frontend:test --workspaces --if-present",
+    "java:docker": "concurrently npm:java:docker:projectservice npm:java:docker:serviceoverviewservice npm:java:docker:learnservice npm:java:docker:productservice npm:java:docker:gateway",
+    "java:docker:arm64": "concurrently npm:java:docker:arm64:projectservice npm:java:docker:arm64:serviceoverviewservice npm:java:docker:arm64:learnservice npm:java:docker:arm64:productservice npm:java:docker:arm64:gateway",
+    "java:docker:arm64:gateway": "npm run java:docker:arm64 --workspace gateway --if-present",
+    "java:docker:arm64:learnservice": "npm run java:docker:arm64 --workspace learnservice --if-present",
+    "java:docker:arm64:productservice": "npm run java:docker:arm64 --workspace productservice --if-present",
+    "java:docker:arm64:projectservice": "npm run java:docker:arm64 --workspace projectservice --if-present",
+    "java:docker:arm64:serviceoverviewservice": "npm run java:docker:arm64 --workspace serviceoverviewservice --if-present",
+    "java:docker:gateway": "npm run java:docker --workspace gateway --if-present",
+    "java:docker:learnservice": "npm run java:docker --workspace learnservice --if-present",
+    "java:docker:productservice": "npm run java:docker --workspace productservice --if-present",
+    "java:docker:projectservice": "npm run java:docker --workspace projectservice --if-present",
+    "java:docker:serviceoverviewservice": "npm run java:docker --workspace serviceoverviewservice --if-present",
+    "watch": "concurrently npm:watch:projectservice npm:watch:serviceoverviewservice npm:watch:learnservice npm:watch:productservice npm:watch:gateway",
+    "watch:gateway": "npm run watch --workspace gateway --if-present",
+    "watch:learnservice": "npm run watch --workspace learnservice --if-present",
+    "watch:productservice": "npm run watch --workspace productservice --if-present",
+    "watch:projectservice": "npm run watch --workspace projectservice --if-present",
+    "watch:serviceoverviewservice": "npm run watch --workspace serviceoverviewservice --if-present",
+    "webapp:test": "npm run webapp:test --workspaces --if-present"
+  },
+  "devDependencies": {
+    "concurrently": "7.3.0",
+    "rxjs": "7.5.6"
+  }
+}

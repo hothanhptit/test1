@@ -1,0 +1,16 @@
+{
+  "generator-jhipster": {
+    "clientFramework": "react",
+    "clientPackageManager": "npm",
+    "dockerCompose": false,
+    "monorepository": true,
+    "packages": [
+      "projectservice",
+      "serviceoverviewservice",
+      "learnservice",
+      "productservice",
+      "gateway"
+    ],
+    "skipServer": true
+  }
+}

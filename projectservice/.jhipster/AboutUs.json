@@ -1,0 +1,51 @@
+{
+  "applications": ["projectservice"],
+  "changelogDate": "20230704082509",
+  "clientRootFolder": "projectservice",
+  "databaseType": "sql",
+  "dto": "mapstruct",
+  "embedded": false,
+  "entityTableName": "about_us",
+  "fields": [
+    {
+      "fieldName": "slogan",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "sloganEn",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "about",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "aboutEn",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "mission",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "missionEn",
+      "fieldType": "String"
+    }
+  ],
+  "fluentMethods": true,
+  "jpaMetamodelFiltering": false,
+  "microserviceName": "projectservice",
+  "name": "AboutUs",
+  "pagination": "pagination",
+  "readOnly": false,
+  "relationships": [
+    {
+      "otherEntityName": "filesAboutUs",
+      "otherEntityRelationshipName": "aboutUs",
+      "relationshipName": "filesAboutUs",
+      "relationshipType": "one-to-many"
+    }
+  ],
+  "service": "serviceImpl",
+  "skipServer": true
+}

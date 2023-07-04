@@ -1,0 +1,50 @@
+{
+  "applications": ["serviceoverviewservice", "learnservice"],
+  "changelogDate": "20230704082709",
+  "clientRootFolder": "learnservice",
+  "databaseType": "sql",
+  "dto": "mapstruct",
+  "embedded": false,
+  "entityTableName": "jhi_comment",
+  "fields": [
+    {
+      "fieldName": "content",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "contentEn",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "status",
+      "fieldType": "CommentStatus",
+      "fieldValues": "PUBLISH,CANCEL,WAITING"
+    },
+    {
+      "fieldName": "parent",
+      "fieldType": "Long"
+    }
+  ],
+  "fluentMethods": true,
+  "jpaMetamodelFiltering": false,
+  "microserviceName": "learnservice",
+  "name": "Comment",
+  "pagination": "pagination",
+  "readOnly": false,
+  "relationships": [
+    {
+      "otherEntityName": "filesComment",
+      "otherEntityRelationshipName": "comment",
+      "relationshipName": "filesComment",
+      "relationshipType": "one-to-many"
+    },
+    {
+      "otherEntityName": "blog",
+      "otherEntityRelationshipName": "comment",
+      "relationshipName": "blog",
+      "relationshipType": "many-to-one"
+    }
+  ],
+  "service": "serviceImpl",
+  "skipServer": true
+}

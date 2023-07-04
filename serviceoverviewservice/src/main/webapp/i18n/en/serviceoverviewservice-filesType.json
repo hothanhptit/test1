@@ -1,0 +1,10 @@
+{
+  "serviceoverviewserviceApp": {
+    "FilesType": {
+      "null": "",
+      "IMAGE": "IMAGE",
+      "VIDEO": "VIDEO",
+      "OTHER": "OTHER"
+    }
+  }
+}

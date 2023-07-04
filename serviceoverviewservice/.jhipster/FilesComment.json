@@ -1,0 +1,40 @@
+{
+  "applications": ["serviceoverviewservice", "learnservice"],
+  "changelogDate": "20230704082910",
+  "clientRootFolder": "serviceoverviewservice",
+  "databaseType": "sql",
+  "dto": "mapstruct",
+  "embedded": false,
+  "entityTableName": "files_comment",
+  "fields": [
+    {
+      "fieldName": "name",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "type",
+      "fieldType": "FilesType",
+      "fieldValues": "IMAGE,VIDEO,OTHER"
+    },
+    {
+      "fieldName": "link",
+      "fieldType": "String"
+    }
+  ],
+  "fluentMethods": true,
+  "jpaMetamodelFiltering": false,
+  "microserviceName": "serviceoverviewservice",
+  "name": "FilesComment",
+  "pagination": "pagination",
+  "readOnly": false,
+  "relationships": [
+    {
+      "otherEntityName": "comment",
+      "otherEntityRelationshipName": "filesComment",
+      "relationshipName": "comment",
+      "relationshipType": "many-to-one"
+    }
+  ],
+  "service": "serviceImpl",
+  "skipServer": true
+}

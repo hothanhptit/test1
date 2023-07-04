@@ -1,0 +1,28 @@
+{
+  "learnserviceApp": {
+    "learnserviceFilesComment": {
+      "home": {
+        "title": "Files Comments",
+        "refreshListLabel": "Refresh list",
+        "createLabel": "Create a new Files Comment",
+        "createOrEditLabel": "Create or edit a Files Comment",
+        "search": "Search for Files Comment",
+        "notFound": "No Files Comments found"
+      },
+      "created": "A new Files Comment is created with identifier {{ param }}",
+      "updated": "A Files Comment is updated with identifier {{ param }}",
+      "deleted": "A Files Comment is deleted with identifier {{ param }}",
+      "delete": {
+        "question": "Are you sure you want to delete Files Comment {{ id }}?"
+      },
+      "detail": {
+        "title": "Files Comment"
+      },
+      "id": "ID",
+      "name": "Name",
+      "type": "Type",
+      "link": "Link",
+      "comment": "Comment"
+    }
+  }
+}

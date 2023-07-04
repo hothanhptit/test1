@@ -1,0 +1,40 @@
+{
+  "applications": ["projectservice"],
+  "changelogDate": "20230704082809",
+  "clientRootFolder": "projectservice",
+  "databaseType": "sql",
+  "dto": "mapstruct",
+  "embedded": false,
+  "entityTableName": "files_about_us",
+  "fields": [
+    {
+      "fieldName": "name",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "type",
+      "fieldType": "FilesType",
+      "fieldValues": "IMAGE,VIDEO,OTHER"
+    },
+    {
+      "fieldName": "link",
+      "fieldType": "String"
+    }
+  ],
+  "fluentMethods": true,
+  "jpaMetamodelFiltering": false,
+  "microserviceName": "projectservice",
+  "name": "FilesAboutUs",
+  "pagination": "pagination",
+  "readOnly": false,
+  "relationships": [
+    {
+      "otherEntityName": "aboutUs",
+      "otherEntityRelationshipName": "filesAboutUs",
+      "relationshipName": "aboutUs",
+      "relationshipType": "many-to-one"
+    }
+  ],
+  "service": "serviceImpl",
+  "skipServer": true
+}

@@ -1,0 +1,30 @@
+{
+  "projectserviceApp": {
+    "projectserviceSupportOnline": {
+      "home": {
+        "title": "Support Onlines",
+        "refreshListLabel": "Refresh list",
+        "createLabel": "Create a new Support Online",
+        "createOrEditLabel": "Create or edit a Support Online",
+        "notFound": "No Support Onlines found"
+      },
+      "created": "A new Support Online is created with identifier {{ param }}",
+      "updated": "A Support Online is updated with identifier {{ param }}",
+      "deleted": "A Support Online is deleted with identifier {{ param }}",
+      "delete": {
+        "question": "Are you sure you want to delete Support Online {{ id }}?"
+      },
+      "detail": {
+        "title": "Support Online"
+      },
+      "id": "ID",
+      "avatar": "Avatar",
+      "type": "Type",
+      "script": "Script",
+      "fullname": "Fullname",
+      "description": "Description",
+      "descriptionEn": "Description En",
+      "enable": "Enable"
+    }
+  }
+}

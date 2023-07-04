@@ -1,0 +1,11 @@
+{
+  "projectserviceApp": {
+    "SupportOnlineType": {
+      "null": "",
+      "FACEBOOK": "FACEBOOK",
+      "ZALO": "ZALO",
+      "PHONE": "PHONE",
+      "TELEGRAM": "TELEGRAM"
+    }
+  }
+}

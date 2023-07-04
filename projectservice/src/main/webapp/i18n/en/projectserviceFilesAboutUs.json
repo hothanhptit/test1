@@ -1,0 +1,27 @@
+{
+  "projectserviceApp": {
+    "projectserviceFilesAboutUs": {
+      "home": {
+        "title": "Files Aboutuses",
+        "refreshListLabel": "Refresh list",
+        "createLabel": "Create a new Files About Us",
+        "createOrEditLabel": "Create or edit a Files About Us",
+        "notFound": "No Files Aboutuses found"
+      },
+      "created": "A new Files About Us is created with identifier {{ param }}",
+      "updated": "A Files About Us is updated with identifier {{ param }}",
+      "deleted": "A Files About Us is deleted with identifier {{ param }}",
+      "delete": {
+        "question": "Are you sure you want to delete Files About Us {{ id }}?"
+      },
+      "detail": {
+        "title": "Files About Us"
+      },
+      "id": "ID",
+      "name": "Name",
+      "type": "Type",
+      "link": "Link",
+      "aboutUs": "About Us"
+    }
+  }
+}

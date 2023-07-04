@@ -1,0 +1,53 @@
+{
+  "applications": ["learnservice"],
+  "changelogDate": "20230704083309",
+  "clientRootFolder": "learnservice",
+  "databaseType": "sql",
+  "dto": "mapstruct",
+  "embedded": false,
+  "entityTableName": "lesson",
+  "fields": [
+    {
+      "fieldName": "name",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "nameEn",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "description",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "descriptionEn",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "video",
+      "fieldType": "String"
+    }
+  ],
+  "fluentMethods": true,
+  "jpaMetamodelFiltering": false,
+  "microserviceName": "learnservice",
+  "name": "Lesson",
+  "pagination": "pagination",
+  "readOnly": false,
+  "relationships": [
+    {
+      "otherEntityName": "filesLesson",
+      "otherEntityRelationshipName": "lesson",
+      "relationshipName": "filesLesson",
+      "relationshipType": "one-to-many"
+    },
+    {
+      "otherEntityName": "courses",
+      "otherEntityRelationshipName": "lesson",
+      "relationshipName": "courses",
+      "relationshipType": "many-to-one"
+    }
+  ],
+  "service": "serviceImpl",
+  "skipServer": true
+}

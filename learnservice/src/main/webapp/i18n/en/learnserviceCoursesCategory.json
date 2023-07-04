@@ -1,0 +1,30 @@
+{
+  "learnserviceApp": {
+    "learnserviceCoursesCategory": {
+      "home": {
+        "title": "Courses Categories",
+        "refreshListLabel": "Refresh list",
+        "createLabel": "Create a new Courses Category",
+        "createOrEditLabel": "Create or edit a Courses Category",
+        "search": "Search for Courses Category",
+        "notFound": "No Courses Categories found"
+      },
+      "created": "A new Courses Category is created with identifier {{ param }}",
+      "updated": "A Courses Category is updated with identifier {{ param }}",
+      "deleted": "A Courses Category is deleted with identifier {{ param }}",
+      "delete": {
+        "question": "Are you sure you want to delete Courses Category {{ id }}?"
+      },
+      "detail": {
+        "title": "Courses Category"
+      },
+      "id": "ID",
+      "name": "Name",
+      "nameEn": "Name En",
+      "description": "Description",
+      "descriptionEn": "Description En",
+      "parentId": "Parent Id",
+      "courses": "Courses"
+    }
+  }
+}

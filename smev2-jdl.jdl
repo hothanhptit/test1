@@ -1,0 +1,354 @@
+/*
+* All entity will be extend abstract AbstractAuditingEntity to have:
+*	 String createdBy;
+*    Instant createdDate
+*    String lastModifiedBy
+*    Instant lastModifiedDate
+*/
+
+application {
+  config {
+    baseName gateway
+    applicationType gateway
+    packageName vn.smestore
+    authenticationType oauth2
+    prodDatabaseType oracle
+    devDatabaseType oracle
+    serverPort 8000   
+    clientFramework react
+    serviceDiscoveryType consul
+    microfrontends [projectservice, serviceoverviewservice, learnservice, productservice]
+  }
+}
+
+application {
+  config {
+    baseName projectservice
+    applicationType microservice
+    packageName vn.smestore
+    authenticationType oauth2
+    prodDatabaseType oracle
+    devDatabaseType oracle
+    serverPort 8001   
+    clientFramework react
+    serviceDiscoveryType consul
+  }
+  entities Banner, Outstanding, AboutUs, ServiceProvide, Quote,
+  			Partner, Contact, SupportOnline, FilesPartner, FilesBanner, FilesAboutUs
+}
+
+
+application {
+  config {
+    baseName serviceoverviewservice
+    applicationType microservice
+    packageName vn.smestore
+    authenticationType oauth2
+    prodDatabaseType oracle
+    devDatabaseType oracle
+    serverPort 8002
+    clientFramework react
+    searchEngine elasticsearch
+    serviceDiscoveryType consul
+  }
+  entities BlogCategory, Blog, Comment, FilesBlog, FilesComment
+}
+
+application {
+  config {
+    baseName learnservice
+    applicationType microservice
+    packageName vn.smestore
+    authenticationType oauth2
+    prodDatabaseType oracle
+    devDatabaseType oracle
+    serverPort 8003
+    clientFramework react
+    searchEngine elasticsearch
+    serviceDiscoveryType consul
+  }
+  entities BlogCategory, Blog, Comment, CoursesCategory, 
+  	Courses, Lesson, FilesLesson, FilesBlog, FilesComment
+}
+
+application {
+  config {
+    baseName productservice
+    applicationType microservice
+    packageName vn.smestore
+    authenticationType oauth2
+    prodDatabaseType oracle
+    devDatabaseType oracle
+    serverPort 8004
+    clientFramework react
+    searchEngine elasticsearch
+    serviceDiscoveryType consul
+  }
+  entities ProductCategory, Product, ProductImage
+}
+
+/* ========= Start: Common ========= */
+enum FilesType {
+	IMAGE, VIDEO, OTHER
+}
+/* ========= Start: Common ========= */
+
+/* ========= Start: Core service ========= */
+enum BannerType {
+	HOMEPAGE, NEWS, PROJECT
+}
+
+entity Banner {
+	type BannerType
+    label String
+    labelEn String
+    desctiption String
+    desctiptionEn String
+    link String
+}
+
+entity FilesBanner {
+	name String
+    type FilesType
+    link String
+}
+
+entity Outstanding {
+	image String
+	title String
+	titleEn String
+    description String
+    descriptionEn String
+}
+
+entity AboutUs {
+	slogan String
+	sloganEn String
+    about String 
+    aboutEn String 
+    mission String
+    missionEn String
+}
+
+entity FilesAboutUs {
+	name String
+    type FilesType
+    link String
+}
+
+
+/*
+* Dịch vụ
+*/
+entity ServiceProvide  {
+	image String
+    title String
+    titleEn String
+    shortDescription String
+    shortDescriptionEn String
+    link String
+}
+
+
+/*
+* Báo giá
+*/
+entity Quote {
+	index Integer
+	label String
+	labelEn String
+    title String
+    titleEn String
+    subTitle String
+    subTitleEn String
+    content String
+    contentEn String
+    highline Boolean
+    price String
+    priceEn String
+}
+
+entity Partner {
+	name String
+	nameEn String
+    link String
+}
+
+entity FilesPartner {
+	name String
+    type FilesType
+    link String
+}
+
+entity Contact {
+	fullname String
+    email String 
+    phone String 
+    content String 
+    response String 
+    status Integer
+}
+
+enum SupportOnlineType {
+	FACEBOOK, ZALO, PHONE, TELEGRAM
+}
+
+entity SupportOnline {
+	avatar String
+	type SupportOnlineType
+    script String
+    fullname String
+    description String
+    descriptionEn String
+    enable Boolean
+}
+/* ========= End: Core service ========= */
+
+
+/* ========= Start: Blog service ========= */
+enum BlogCategoryType {
+	NEWS, LEARNING, KNOWLEDGE, SUPPORT
+}
+
+entity BlogCategory {
+	type BlogCategoryType
+	image String
+	title String 
+	titleEn String
+    desctiption String
+    desctiptionEn String
+    parent Long
+}
+
+enum BlogStatus {
+	CANCEL, PUCLISH, WAITING, TOP_BLOG
+}
+
+entity Blog {
+	title String
+    titleEn String
+    description String
+    descriptionEn String
+    content String
+    contentEn String
+    onwer String
+    status BlogStatus
+    view Long
+}
+
+entity FilesBlog {
+	name String
+    type FilesType
+    link String
+}
+
+
+enum CommentStatus {
+	PUBLISH, CANCEL, WAITING
+}
+
+entity Comment {
+	content String
+	contentEn String
+    status CommentStatus
+    parent Long
+}
+
+entity FilesComment {
+	name String
+    type FilesType
+    link String
+}
+
+
+entity ProductCategory {
+	name String
+    nameEn String
+    image String
+    parentId Long
+}
+
+entity Product {
+    name String
+    nameEn String
+    description String
+    descriptionEn String
+    star Boolean
+    link String
+}
+
+entity ProductImage {
+	title String
+	titleEn String
+	description String
+	descriptionEn String
+    image String
+}
+/* End: Blog service */
+
+/* ========= Start: Learn service ========= */
+entity CoursesCategory {
+	name String
+    nameEn String
+    description String
+    descriptionEn String
+    parentId Long
+}
+
+entity Courses {
+	title String
+	titleEn String
+	description String
+	descriptionEn String
+    numLesson String
+    time String
+    image String
+    price Long
+}
+
+entity Lesson {
+	name String
+	nameEn String
+    description String
+	descriptionEn String
+	video String
+}
+
+entity FilesLesson {
+	name String
+    type FilesType
+    link String
+}
+
+
+/* ========= End: Learn service ========= */
+
+
+relationship OneToMany {
+	/* ========= Core service ========= */
+    Partner to FilesPartner
+    Banner to FilesBanner
+    AboutUs to FilesAboutUs
+    
+	/* ========= Project service ========= */
+    ProductCategory to Product
+    Product to ProductImage
+    
+	/* ========= News service ========= */
+  	BlogCategory to Blog
+    Blog to FilesBlog
+    Blog to Comment
+    Comment to FilesComment
+    
+    /* ========= Learn service ========= */
+    CoursesCategory to Courses
+    Courses to Lesson
+    Lesson to FilesLesson
+}
+
+
+dto * with mapstruct
+paginate * with pagination
+service * with serviceClass
+service * with serviceImpl
+search Blog, Product, ServiceProvide, Contact with elasticsearch

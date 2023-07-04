@@ -1,0 +1,27 @@
+{
+  "projectserviceApp": {
+    "projectserviceFilesPartner": {
+      "home": {
+        "title": "Files Partners",
+        "refreshListLabel": "Refresh list",
+        "createLabel": "Create a new Files Partner",
+        "createOrEditLabel": "Create or edit a Files Partner",
+        "notFound": "No Files Partners found"
+      },
+      "created": "A new Files Partner is created with identifier {{ param }}",
+      "updated": "A Files Partner is updated with identifier {{ param }}",
+      "deleted": "A Files Partner is deleted with identifier {{ param }}",
+      "delete": {
+        "question": "Are you sure you want to delete Files Partner {{ id }}?"
+      },
+      "detail": {
+        "title": "Files Partner"
+      },
+      "id": "ID",
+      "name": "Name",
+      "type": "Type",
+      "link": "Link",
+      "partner": "Partner"
+    }
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "projectserviceApp": {
+    "projectserviceServiceProvide": {
+      "home": {
+        "title": "Service Provides",
+        "refreshListLabel": "Refresh list",
+        "createLabel": "Create a new Service Provide",
+        "createOrEditLabel": "Create or edit a Service Provide",
+        "notFound": "No Service Provides found"
+      },
+      "created": "A new Service Provide is created with identifier {{ param }}",
+      "updated": "A Service Provide is updated with identifier {{ param }}",
+      "deleted": "A Service Provide is deleted with identifier {{ param }}",
+      "delete": {
+        "question": "Are you sure you want to delete Service Provide {{ id }}?"
+      },
+      "detail": {
+        "title": "Service Provide"
+      },
+      "id": "ID",
+      "image": "Image",
+      "title": "Title",
+      "titleEn": "Title En",
+      "shortDescription": "Short Description",
+      "shortDescriptionEn": "Short Description En",
+      "link": "Link"
+    }
+  }
+}

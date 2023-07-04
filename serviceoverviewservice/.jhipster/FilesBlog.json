@@ -1,0 +1,40 @@
+{
+  "applications": ["serviceoverviewservice", "learnservice"],
+  "changelogDate": "20230704082810",
+  "clientRootFolder": "serviceoverviewservice",
+  "databaseType": "sql",
+  "dto": "mapstruct",
+  "embedded": false,
+  "entityTableName": "files_blog",
+  "fields": [
+    {
+      "fieldName": "name",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "type",
+      "fieldType": "FilesType",
+      "fieldValues": "IMAGE,VIDEO,OTHER"
+    },
+    {
+      "fieldName": "link",
+      "fieldType": "String"
+    }
+  ],
+  "fluentMethods": true,
+  "jpaMetamodelFiltering": false,
+  "microserviceName": "serviceoverviewservice",
+  "name": "FilesBlog",
+  "pagination": "pagination",
+  "readOnly": false,
+  "relationships": [
+    {
+      "otherEntityName": "blog",
+      "otherEntityRelationshipName": "filesBlog",
+      "relationshipName": "blog",
+      "relationshipType": "many-to-one"
+    }
+  ],
+  "service": "serviceImpl",
+  "skipServer": true
+}

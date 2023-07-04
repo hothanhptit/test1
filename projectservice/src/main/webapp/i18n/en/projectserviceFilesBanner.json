@@ -1,0 +1,27 @@
+{
+  "projectserviceApp": {
+    "projectserviceFilesBanner": {
+      "home": {
+        "title": "Files Banners",
+        "refreshListLabel": "Refresh list",
+        "createLabel": "Create a new Files Banner",
+        "createOrEditLabel": "Create or edit a Files Banner",
+        "notFound": "No Files Banners found"
+      },
+      "created": "A new Files Banner is created with identifier {{ param }}",
+      "updated": "A Files Banner is updated with identifier {{ param }}",
+      "deleted": "A Files Banner is deleted with identifier {{ param }}",
+      "delete": {
+        "question": "Are you sure you want to delete Files Banner {{ id }}?"
+      },
+      "detail": {
+        "title": "Files Banner"
+      },
+      "id": "ID",
+      "name": "Name",
+      "type": "Type",
+      "link": "Link",
+      "banner": "Banner"
+    }
+  }
+}

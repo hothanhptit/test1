@@ -1,0 +1,52 @@
+{
+  "applications": ["projectservice"],
+  "changelogDate": "20230704082609",
+  "clientRootFolder": "projectservice",
+  "databaseType": "sql",
+  "dto": "mapstruct",
+  "embedded": false,
+  "entityTableName": "banner",
+  "fields": [
+    {
+      "fieldName": "type",
+      "fieldType": "BannerType",
+      "fieldValues": "HOMEPAGE,NEWS,PROJECT"
+    },
+    {
+      "fieldName": "label",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "labelEn",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "desctiption",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "desctiptionEn",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "link",
+      "fieldType": "String"
+    }
+  ],
+  "fluentMethods": true,
+  "jpaMetamodelFiltering": false,
+  "microserviceName": "projectservice",
+  "name": "Banner",
+  "pagination": "pagination",
+  "readOnly": false,
+  "relationships": [
+    {
+      "otherEntityName": "filesBanner",
+      "otherEntityRelationshipName": "banner",
+      "relationshipName": "filesBanner",
+      "relationshipType": "one-to-many"
+    }
+  ],
+  "service": "serviceImpl",
+  "skipServer": true
+}

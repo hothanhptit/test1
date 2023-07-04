@@ -1,0 +1,77 @@
+{
+  "applications": ["serviceoverviewservice", "learnservice"],
+  "changelogDate": "20230704082509",
+  "clientRootFolder": "learnservice",
+  "databaseType": "sql",
+  "dto": "mapstruct",
+  "embedded": false,
+  "entityTableName": "blog",
+  "fields": [
+    {
+      "fieldName": "title",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "titleEn",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "description",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "descriptionEn",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "content",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "contentEn",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "onwer",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "status",
+      "fieldType": "BlogStatus",
+      "fieldValues": "CANCEL,PUCLISH,WAITING,TOP_BLOG"
+    },
+    {
+      "fieldName": "view",
+      "fieldType": "Long"
+    }
+  ],
+  "fluentMethods": true,
+  "jpaMetamodelFiltering": false,
+  "microserviceName": "learnservice",
+  "name": "Blog",
+  "pagination": "pagination",
+  "readOnly": false,
+  "relationships": [
+    {
+      "otherEntityName": "filesBlog",
+      "otherEntityRelationshipName": "blog",
+      "relationshipName": "filesBlog",
+      "relationshipType": "one-to-many"
+    },
+    {
+      "otherEntityName": "comment",
+      "otherEntityRelationshipName": "blog",
+      "relationshipName": "comment",
+      "relationshipType": "one-to-many"
+    },
+    {
+      "otherEntityName": "blogCategory",
+      "otherEntityRelationshipName": "blog",
+      "relationshipName": "blogCategory",
+      "relationshipType": "many-to-one"
+    }
+  ],
+  "searchEngine": "elasticsearch",
+  "service": "serviceImpl",
+  "skipServer": true
+}

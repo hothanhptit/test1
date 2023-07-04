@@ -1,0 +1,28 @@
+{
+  "learnserviceApp": {
+    "learnserviceFilesLesson": {
+      "home": {
+        "title": "Files Lessons",
+        "refreshListLabel": "Refresh list",
+        "createLabel": "Create a new Files Lesson",
+        "createOrEditLabel": "Create or edit a Files Lesson",
+        "search": "Search for Files Lesson",
+        "notFound": "No Files Lessons found"
+      },
+      "created": "A new Files Lesson is created with identifier {{ param }}",
+      "updated": "A Files Lesson is updated with identifier {{ param }}",
+      "deleted": "A Files Lesson is deleted with identifier {{ param }}",
+      "delete": {
+        "question": "Are you sure you want to delete Files Lesson {{ id }}?"
+      },
+      "detail": {
+        "title": "Files Lesson"
+      },
+      "id": "ID",
+      "name": "Name",
+      "type": "Type",
+      "link": "Link",
+      "lesson": "Lesson"
+    }
+  }
+}

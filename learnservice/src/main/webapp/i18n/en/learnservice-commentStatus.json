@@ -1,0 +1,10 @@
+{
+  "learnserviceApp": {
+    "CommentStatus": {
+      "null": "",
+      "PUBLISH": "PUBLISH",
+      "CANCEL": "CANCEL",
+      "WAITING": "WAITING"
+    }
+  }
+}

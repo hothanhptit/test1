@@ -1,0 +1,28 @@
+{
+  "projectserviceApp": {
+    "projectserviceOutstanding": {
+      "home": {
+        "title": "Outstandings",
+        "refreshListLabel": "Refresh list",
+        "createLabel": "Create a new Outstanding",
+        "createOrEditLabel": "Create or edit a Outstanding",
+        "notFound": "No Outstandings found"
+      },
+      "created": "A new Outstanding is created with identifier {{ param }}",
+      "updated": "A Outstanding is updated with identifier {{ param }}",
+      "deleted": "A Outstanding is deleted with identifier {{ param }}",
+      "delete": {
+        "question": "Are you sure you want to delete Outstanding {{ id }}?"
+      },
+      "detail": {
+        "title": "Outstanding"
+      },
+      "id": "ID",
+      "image": "Image",
+      "title": "Title",
+      "titleEn": "Title En",
+      "description": "Description",
+      "descriptionEn": "Description En"
+    }
+  }
+}

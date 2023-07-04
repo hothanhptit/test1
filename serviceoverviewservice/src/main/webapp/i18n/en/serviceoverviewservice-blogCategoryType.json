@@ -1,0 +1,11 @@
+{
+  "serviceoverviewserviceApp": {
+    "BlogCategoryType": {
+      "null": "",
+      "NEWS": "NEWS",
+      "LEARNING": "LEARNING",
+      "KNOWLEDGE": "KNOWLEDGE",
+      "SUPPORT": "SUPPORT"
+    }
+  }
+}

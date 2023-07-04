@@ -1,0 +1,10 @@
+{
+  "projectserviceApp": {
+    "BannerType": {
+      "null": "",
+      "HOMEPAGE": "HOMEPAGE",
+      "NEWS": "NEWS",
+      "PROJECT": "PROJECT"
+    }
+  }
+}
